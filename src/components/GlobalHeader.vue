@@ -2,7 +2,7 @@
   <div id="globalHeader">
     <a-menu
       mode="horizontal"
-      :default-selected-keys="['1']"
+      :selected-keys="selectedKeys"
       @menu-item-click="doMenuClick"
     >
       <a-menu-item
@@ -24,8 +24,17 @@
 <script setup lang="ts">
 import { routes } from "@/router/routes";
 import { useRouter } from "vue-router";
+import { ref } from "vue";
 
 const router = useRouter();
+
+// 默认主页
+const selectedKeys = ref(["/"]);
+
+// 路由跳转后，更新选中的菜单项
+router.afterEach((to, from, failure) => {
+  selectedKeys.value = [to.path];
+});
 
 const doMenuClick = (key: string) => {
   router.push({
