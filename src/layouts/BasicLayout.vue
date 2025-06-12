@@ -17,7 +17,7 @@
 }
 
 #basicLayout .header {
-  background: red;
+  box-shadow: #eee 1px 1px 5px;
   margin-bottom: 16px;
 }
 
