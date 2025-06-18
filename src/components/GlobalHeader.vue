@@ -1,10 +1,5 @@
 <template>
-  <a-row
-    id="globalHeader"
-    class="grid-demo"
-    align="center"
-    style="margin-bottom: 16px"
-  >
+  <a-row id="globalHeader" class="grid-demo" align="center" :wrap="false">
     <a-col flex="auto">
       <a-menu
         mode="horizontal"
@@ -51,11 +46,12 @@ router.afterEach((to, from, failure) => {
 
 const store = useStore();
 
-setTimeout(() => {
-  store.dispatch("user/getLoginUser", {
-    userName: "YTUer",
-  });
-}, 3000);
+// setTimeout(() => {
+//   store.dispatch("user/getLoginUser", {
+//     userName: "YTUer",
+//     role: "admin",
+//   });
+// }, 3000);
 
 const doMenuClick = (key: string) => {
   router.push({
