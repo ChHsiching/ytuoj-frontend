@@ -1,7 +1,11 @@
 <template>
   <div id="userLayout">
     <a-layout style="min-height: 100vh">
-      <a-layout-header class="header"> 用户布局 </a-layout-header>
+      <a-layout-header class="header">
+        <a-space>
+          <img src="@/assets/oj-logo.png" class="logo" alt="YTU-OJ" />
+        </a-space>
+      </a-layout-header>
       <a-layout-content class="content"><router-view /></a-layout-content>
       <a-layout-footer class="footer">
         <a href="https://ytu.edu.cn" target="_blank">
@@ -14,21 +18,25 @@
 
 <style scoped>
 #userLayout {
+  text-align: center;
+  background: url("https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png")
+    0% 0% / 100% 100%;
+}
+
+#userLayout .logo {
+  width: 150px;
 }
 
 #userLayout .header {
-  box-shadow: #eee 1px 1px 5px;
-  margin-bottom: 16px;
+  margin-top: 30px;
 }
 
 #userLayout .content {
-  background: linear-gradient(to right, #bbb, #fff);
   margin-bottom: 16px;
   padding: 20px;
 }
 
 #userLayout .footer {
-  background: #efefef;
   padding: 16px;
   position: sticky;
   bottom: 0;
