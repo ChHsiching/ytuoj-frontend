@@ -1,7 +1,7 @@
 <template>
-  <div id="basicLayout">
+  <div id="userLayout">
     <a-layout style="min-height: 100vh">
-      <a-layout-header class="header"><GlobalHeader /></a-layout-header>
+      <a-layout-header class="header"> 用户布局 </a-layout-header>
       <a-layout-content class="content"><router-view /></a-layout-content>
       <a-layout-footer class="footer">
         <a href="https://ytu.edu.cn" target="_blank">
@@ -13,21 +13,21 @@
 </template>
 
 <style scoped>
-#basicLayout {
+#userLayout {
 }
 
-#basicLayout .header {
+#userLayout .header {
   box-shadow: #eee 1px 1px 5px;
   margin-bottom: 16px;
 }
 
-#basicLayout .content {
+#userLayout .content {
   background: linear-gradient(to right, #bbb, #fff);
   margin-bottom: 16px;
   padding: 20px;
 }
 
-#basicLayout .footer {
+#userLayout .footer {
   background: #efefef;
   padding: 16px;
   position: sticky;
@@ -37,6 +37,4 @@
   text-align: center;
 }
 </style>
-<script setup lang="ts">
-import GlobalHeader from "@/components/GlobalHeader.vue";
-</script>
+<script></script>
